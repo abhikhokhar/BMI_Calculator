@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+    <h1 class="text-5xl font-bold mb-6 text-center">BMI Calculator</h1>
+
+    <div class="bg-white p-8 rounded shadow-xl w-full max-w-sm">
+        <form id="bmiForm" class="space-y-4">
+
+            <div>
+                <label for="weight" class="block text-sm font-medium text-gray-700">Weight (kg)</label>
+                <input type="number" id="weight" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Enter Your Weight" required>
+            </div>
+            <div>
+                <label for="height" class="block text-sm font-medium text-gray-700">Height (cm)</label>
+                <input type="number" id="height" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Enter Your height" required>
+            </div>
+            <button type="submit" class="mx-24 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md">Calculate
+                BMI</button>
+        </form>
+        <div id="result" class="mt-4 text-center text-lg font-semibold"></div>
+        <div id="advice" class="text-center text-sm font-medium text-gray-700"></div>
+
+        <!-- Requirements for BMI calculation -->
+        <div class="mt-6 p-4 bg-gray-50 rounded-md">
+            <h2 class="text-xl font-bold mb-2">BMI Categories:</h2> 
+
+            <ul class="list-disc pl-5">
+                <li><strong>Underweight</strong>: BMI &lt; 18.5</li>
+                <li><strong>Normal weight</strong>: BMI 18.5–24.9</li>
+                <li><strong>Overweight</strong>: BMI 25–29.9</li>
+                <li><strong>Obesity</strong>: BMI ≥ 30</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
